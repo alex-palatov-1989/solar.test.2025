@@ -1,0 +1,3 @@
+This "spaghetti" project was created as a test task for SolarLab to evaluate my Java skills. The main goal was to use simple libraries with minimal documentation, leveraging the language's capabilities to replace popular frameworks in the workflow. As a result, this code has fewer dependencies compared to other approaches. 
+
+It's also my first complex web application, and I’m excited about my initial attempts with CSS and HTML. While it isn't a Single Page Application (SPA), it features straightforward queries to the backend. With just a few lines of JavaScript that utilize async/await and fetch, I could easily transform it into a JSON-based SPA in the future. Maybe I'll do that later!
