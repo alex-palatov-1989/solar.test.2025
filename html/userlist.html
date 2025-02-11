@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        .userlist {
+            width: 800px;
+            height:750px;
+            overflow: auto;
+            border:  1px solid #ccc;
+            padding: 10px;
+            margin-left: 500px;
+        }
+    </style>
+</head>
+<body>
+    <div class="userlist">
+        %USERLIST%
+    </div>
+        <style>
+            .user-card .frmID{
+                visibility: hidden;
+            }
+            .user-card .field{
+                font-size: large;                
+            }
+            .user-card .label{
+                margin-left: 50px;
+            }
+            .user-card .dialog-buttons{
+                display:        flex;
+                font-size:      large;                
+                padding-left:   50px;
+            }
+            .user-card .enter{
+                width:        99px;
+                height:       40px;   
+                margin-left:  50px;                             
+            }
+            .user-card .close{
+                width:        99px;
+                height:       40px;
+                margin-left:  50px;                             
+            }
+            .user-card .contacts {
+                padding:    20px;                
+                font-family: system-ui;
+            }
+            .user-card .birthdate {
+                padding:     5px;      
+                font-family: 'Courier New', Courier;          
+                font-size: large;
+                justify-content: center;
+            }
+            .user-card .birthdate.past{
+                color : #a55
+            }
+            .user-card .birthdate.next{
+                color : #5a5
+            }
+            .user-card.far{
+                opacity: 50%;
+            }
+            .user-card .avatar{
+                margin-left:  225px;
+                border-radius: 30px;
+                object-fit: contain;
+            }
+            .user-card .attach{
+                height:        45px;
+                margin-top :   15px;
+                margin-left:   450px;
+                font-family: Verdana;
+                justify-content: center;
+            }
+            .user-card .username{
+                margin-left:   25px;
+                font-weight:   bold;
+            }
+            .user-card .contacts input {
+                width:      100%;
+                padding:    15px;                
+                border: 1px solid #ccc;
+            }
+            .user-card {
+                border: 1px solid #ccc;
+                width:          600px;
+                padding-left:   125px;
+                margin-left:    50px;
+                margin-top:     5px;
+                border-radius:  8px;                
+            }
+            .user-card .dialog-form{
+                font-family: system-ui;                
+            }
+            .user-card .button{ 
+                padding-left: 333;
+            }
+        </style>
+    </div>
+        %USERFORM%           
+</body>
+</html>

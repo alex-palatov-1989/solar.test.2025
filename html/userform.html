@@ -1,0 +1,48 @@
+<div class="user-form">
+    <div id="newUserForm">
+        <button class="userform" onclick="openUserForm()">
+            Create New User
+        </button>                
+    </div>
+    <script>
+        function closeNewUser(){
+            const attached = `
+                <button class="userform" onclick="openUserForm()">
+                    Create New User
+                </button>     
+            `;
+            document.getElementById("newUserForm").innerHTML=attached;                    
+        }        
+        function openUserForm(){
+            const attached = 
+            `
+                <form method="post" action="%URL%username">
+                    <input type="text" name="username"   pattern="^[a-zA-Z]+$" placeholder="Name" required>
+                    <input type="text" name="secondname" pattern="^[a-zA-Z]+$" placeholder="Snd Name">
+                    <input type="text" name="thirdname"  pattern="^[a-zA-Z]+$" placeholder="Trd Name">
+                    <input type="date" name="birthday"   pattern="^[a-zA-Z]+$" required>
+                    <input type="submit" value="Send">        
+                    <button onclick="closeNewUser()">Close</button>
+                </form>       
+            `;
+            document.getElementById("newUserForm").innerHTML = attached;
+        }        
+        async function onSubmit(){
+            //setTimeout(9999);
+            //window.location.replace = "%URL%";
+            //document.innerHTML = await fetch("%URL%");                    
+        }
+    </script>
+    <style>
+        .userform{
+            margin-left: 750px;
+        }
+        .user-form{
+            padding : 15px;
+            margin  : 15px;
+            margin-left: 500px;
+            font-family: Arial;
+            font-size: larger;
+        }
+    </style>            
+</div>     

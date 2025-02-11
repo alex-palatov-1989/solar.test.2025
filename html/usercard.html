@@ -1,0 +1,53 @@
+<div id="user%ID%" class="user-card%ISFAR%">
+    
+        <span>
+        <h3><span class="username">%NAME1%</span>
+            <form method="post" id="imgform%ID%" action="%URL%upload" enctype="multipart/form-data">
+                <label for="img%ID%">
+                    <img  class="avatar" src="%URL%%PHOTO%" alt="Photo" width="240" height="150" type="submit"/>     
+                    <input type="file"   name="img" id="img%ID%" style="display:none" onchange="submit()">
+                    <input type="number" name="idx" value="%ID%" style="display:none">
+                </label> 
+            </form>                        
+        <h4>
+            <span class="secondname">%NAME2%</span>
+            <span class="thirdname" >%NAME3%</span>
+            <div  class="birthdate%ISPAST%">%BIRTH%</div>
+        </span>   
+                        
+        <div id="user%ID%-contacts">
+            <span class="contacts">%MAIL%</span>
+            <span class="contacts">%CELL%</span>
+            <span class="contacts">%ADRESS%</span>    
+        </div>
+        <p></p>
+        <span class="button">
+            <form method="post" action="%URL%delete">        
+                <input type="image" src="%URL%delete.png" alt="Submit" width="48" height="48">
+                <input class="frmID" type="text"    name="id"       value=%ID%>                
+            </form>            
+            <button id="btnAdd%ID%" class="attach" onclick="add%ID%()"> Add contacts </button>
+        </span>
+        <span class="dialog-form" id="attachById%ID%"></span>
+        <script>
+            function add%ID%(){
+                const attached = `
+                    <form method="post" action="%URL%contacts" onsubmit="onSubmit()">        
+                        <h3>Attach Contacts</h3>
+                        <p><input class="field" type="email" id="mail" name="mail"    value="%MAIL%"   >     <label class="label" for="mail"  >Email</label>    
+                        <p><input class="field" type="tel"   id="cell" name="cell"    value="%CELL%"   >     <label class="label" for="cell"  >Phone</label>
+                        <p><input class="field" type="text"  id="adress" name="adress"  value="%ADRESS%" >   <label class="label" for="adress">Address</label>
+                        <span class="dialog-buttons">
+                            <input class="frmID" type="text" name="id"      value=%ID%>
+                            <input class="enter" type="submit" name="send"  value="Submit">
+                            <button class="close" onclick="getElementById('attachById%ID%').innerHTML=''; getElementById('btnAdd%ID%').style.display = "initial"">
+                                Close
+                            </button>                
+                        </span>
+                    </form>                        
+                `;
+                document.getElementById('attachById%ID%').innerHTML = attached;
+                document.getElementById('btnAdd%ID%').style.display = "none";
+            }
+        </script>                        
+</div>

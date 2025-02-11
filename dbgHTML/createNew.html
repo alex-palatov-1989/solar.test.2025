@@ -1,0 +1,17 @@
+<div class="dialog-form" id="newUserForm">
+    <h3>Create New User</h3>
+    <form method="post" action="http://localhost:8080/username">
+        <input type="text" name="username"    placeholder="Name" required>
+        <input type="text" name="secondname"  placeholder="Snd Name">
+        <input type="text" name="thirdname"   placeholder="Trd Name">
+        <input type="date" name="birthday" required>
+        <input type="submit" value="Send">        
+    </form>
+    <button onclick="closeNewUser()">Close</button>
+    <script>
+        function closeNewUser(){
+            document.getElementById("newUserForm").innerHTML="";
+        }        
+    </script>
+    <input type="submit" value="Submit">        
+</div>
