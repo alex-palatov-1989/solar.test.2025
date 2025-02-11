@@ -30,6 +30,7 @@ public class Post extends Util{
             if( e!=null && debuglog ){ 
                 e.printStackTrace(); 
                 log.append(e.getMessage()); 
+                ctx.header("errors", log.toString());
             }
             ctx.status(200);        
             ctx.redirect("/");

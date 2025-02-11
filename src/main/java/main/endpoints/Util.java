@@ -6,5 +6,4 @@ public class Util {
         if( e == null )return; if(e.getMessage() == null) return;
         log.append(e.getMessage());
     }
-    
 }

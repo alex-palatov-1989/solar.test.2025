@@ -118,7 +118,7 @@ public class UserController implements UserServiceI{
         }
         return null;
     }
-    public Exception deleUserData(int id, StringBuilder log){                                    
+    public Exception deleteUserData(int id, StringBuilder log){                                    
         try {
             synchronized (this) {
                 String    path = getPhoto(id).path;
@@ -165,8 +165,6 @@ public class UserController implements UserServiceI{
                     image, file.toPath(), 
                     StandardCopyOption.REPLACE_EXISTING 
                 );
-
-                System.out.println( id );
 
             } catch (Exception e) { e.printStackTrace();
                 if( e.getMessage()!=null)

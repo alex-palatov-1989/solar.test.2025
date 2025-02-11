@@ -16,7 +16,7 @@ public class Delete extends Util{
                 ctx.status(500); return;
             }                       
             StringBuilder log = new StringBuilder(); 
-            Exception e = controller.deleUserData(id, log);
+            Exception e = controller.deleteUserData(id, log);
             if( e==null )
             {
                 ctx.status(200);
@@ -28,7 +28,6 @@ public class Delete extends Util{
                 ctx.status(500);
                 if(debuglog)
                 {
-                    log.append(e.getMessage());
                     ctx.header("errors", log.toString());
                     System.out.println(log.toString());
                 }                                 

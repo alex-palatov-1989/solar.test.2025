@@ -15,8 +15,7 @@ public class UserRender implements AutoCloseable{
 
     @Override
     public void close() throws Exception {
-        //throw new UnsupportedOperationException("Not supported yet.");
-        //rd.close();
+        System.gc();
     }
     enum Tag{
         USERLIST        ("%USERLIST%"),
